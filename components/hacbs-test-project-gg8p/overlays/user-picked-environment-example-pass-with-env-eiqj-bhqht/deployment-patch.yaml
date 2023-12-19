@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: hacbs-test-project-gg8p
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/redhat-appstudio-qe/nbe-e2e-dmgt-tenant/integ-app-tdpa/hacbs-test-project-gg8p@sha256:c6362046f95823c6ef90bb98a9c11b88e8157e7eed8e7651cd63732a0afe2eaf
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
